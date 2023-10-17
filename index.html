@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zesralem sie</title>
+    <link rel="icon" type="image/x-icon" href="kupa.avif">
+</head>
+<style>
+    body {
+        background-color: black; 
+        color: whitesmoke; 
+        font-family: Arial; 
+        font-weight: bold;
+        margin-top: 170px;
+        text-align: center;
+    }
+    
+    button.start {
+        font-weight: bold;
+        font-size: 50px;
+        height: 400px;
+        width: 400px;
+        border-radius: 200px;
+        border: none;
+        background-color: whitesmoke;
+        cursor: pointer;
+    }
+
+    button.start:hover{
+        background-color: lightgreen;
+        transition: background-color 0.30s;
+    }
+    
+
+    p.stylowo {
+        font-size: 60px;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+</style>
+<body>
+    <audio class='dzwiek' src="kici.mp3"></audio>
+    <p class="js-rzeczy"></p>
+    <button class="start js-przycisk">KLIKNIJ MNIE</button>
+</body>
+<script>
+let dzwiek = document.querySelector('.dzwiek')
+let pipa = document.querySelector('.js-przycisk')
+let dupa = document.querySelector('.js-rzeczy')
+pipa.addEventListener('click', () => {
+    dzwiek.play()
+    dupa.innerHTML = '<img src="serce.jpg">'
+    setTimeout(() => {dupa.innerHTML=''}, 3000)
+})
+</script>
+</html>
