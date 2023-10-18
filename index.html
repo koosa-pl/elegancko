@@ -31,12 +31,6 @@
         background-color: lightgreen;
         transition: background-color 0.30s;
     }
-
-    p.start {
-        height: 300px;
-        width: 300px;
-        border-radius: 150px;
-    }
 </style>
 <body>
     <audio class='dzwiek' src="kici.mp3"></audio>
@@ -49,7 +43,7 @@ let pipa = document.querySelector('.js-przycisk')
 let dupa = document.querySelector('.js-rzeczy')
 pipa.addEventListener('click', () => {
     dzwiek.play()
-    dupa.innerHTML = '<img src="serce.jpg" style="border-radius: 300px">'
+    dupa.innerHTML = '<img src="serce.jpg" style="height: 300px; width: 300px; border-radius: 150px">'
     setTimeout(() => {dupa.innerHTML=''}, 3000)
 })
 </script>
